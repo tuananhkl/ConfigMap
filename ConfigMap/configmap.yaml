@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Namespace
+metadata:
+  name: api-configmap
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envvars-configmap
+  namespace: simplek8s-env-vars
+data:
+  MyEnvVar:  "My value of MyEnvVar present in yml code"

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi
+  namespace: simplek8s-env-vars
+  labels:
+    app: weather-forecast
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapi
+  template:
+    metadata:
+      labels:
+        app: weather-forecast
+        service: webapi
+    spec:
+      containers:
+        - name: webapicontainer
+          image: tuananhpro/testconfigmap:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: MyEnvVar
+              valueFrom:
+                configMapKeyRef:
+                  name: envvars-configmap
+                  key: MyEnvVar
