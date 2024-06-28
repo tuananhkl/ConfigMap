@@ -29,3 +29,7 @@ spec:
                 configMapKeyRef:
                   name: envvars-configmap
                   key: MyEnvVar
+            - name: User
+              value: "Derrick"
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"

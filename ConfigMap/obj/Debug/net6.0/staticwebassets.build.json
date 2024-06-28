@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AQ5HfhB7NwXYFZT9ihAiEszKC9srSU+XEBUg1HoLIl8=",
+  "Source": "ConfigMap",
+  "BasePath": "_content/ConfigMap",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
