@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapi
-  namespace: simplek8s-env-vars
+  #namespace: simplek8s-env-vars
   labels:
     app: weather-forecast
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: webapicontainer
-          image: tuananhpro/testconfigmap:latest
+          image: tuananhpro/configmaptest:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
